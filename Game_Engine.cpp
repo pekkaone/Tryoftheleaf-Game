@@ -5,7 +5,7 @@ void Game_Engine::initVariables()
 	this->window = nullptr;
 
 	this->max_exits = 5;
-	this->max_bullets = 5;
+	this->max_bullets = 10;
 
 	this->tHero.loadFromFile("Hero_Trybyleaf.png");
 	this->sHero.setTexture(tHero);
@@ -119,7 +119,6 @@ void Game_Engine::UpdateBullets()
 		}
 	}
 }
-
 
 void Game_Engine::pollEvents()
 {
