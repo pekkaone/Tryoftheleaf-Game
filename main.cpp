@@ -1,8 +1,8 @@
-#include <iostream>
 #include "Game_Engine.h"
 
 int main()
 {
+    std::srand(static_cast<unsigned>(time(NULL)));
 
     Game_Engine game;
 
