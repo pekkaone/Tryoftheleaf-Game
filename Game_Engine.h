@@ -3,56 +3,42 @@
 #include <iostream>
 #include <vector>
 
+#include "StateMachine.h"
+#include "AssetManager.h"
+#include "InputManager.h"
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/System.hpp>
 
+struct GameData
+{
+	Sonar::StateMachine machine;
+	AssetManager assets;
+	InputManager input;
+	sf::RenderWindow* window;
+	sf::VideoMode videomode;
+	float volume = 100;
+	int CurrentSkin = 1;
+};
+
+typedef std::shared_ptr<GameData> GameDataRef;
+
 class Game_Engine
 {
 private:
-	sf::RenderWindow* window;
+	
 	sf::VideoMode videomode;
 	sf::Event ev;
 
-	int max_exits;
-	sf::RectangleShape exit;
-	std::vector<sf::RectangleShape> exits;
-	int max_bullets;
-	sf::RectangleShape bullet;
-	std::vector<sf::RectangleShape> bullets;
-	
+	sf::Clock clock;
+	const float dt = 1.f / 60.f;
+	GameDataRef _data = std::make_shared<GameData>();
 
-	sf::Texture tHero;
-	sf::Sprite sHero;
-
-	bool UP, DOWN, RIGH, LEFT;
-
-	void initVariables();
-	void initWindow();
-	void initExit();
-	void initHero();
-	void initExits();
-
-	void Shooting();
-	void Moving();
+	void Run();
 
 public:
 	Game_Engine();
-	virtual ~Game_Engine();
-
-	const bool Running() const;
-
-	void UpdateBullets();
-
-	void pollEvents();
-
-	void update();
-
-	void renderHero(sf::RenderTarget& target);
-	// void renderExit(sf::RenderTarget& target);
-	void renderExits(sf::RenderTarget& target);
-	void renderBullets(sf::RenderTarget& target);
-	void render();
 };
 

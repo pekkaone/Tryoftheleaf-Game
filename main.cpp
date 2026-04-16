@@ -1,5 +1,5 @@
 #include "Game_Engine.h"
-
+/*
 int main()
 {
     std::srand(static_cast<unsigned>(time(NULL)));
@@ -13,4 +13,10 @@ int main()
         game.render();
     }
     return 0;
+}
+*/
+int main()
+{
+    std::srand(static_cast<unsigned>(time(NULL)));
+    Game_Engine();
 }
