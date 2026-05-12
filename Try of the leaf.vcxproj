@@ -133,9 +133,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
     <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="Game_Engine.cpp" />
     <ClCompile Include="game_state.cpp" />
+    <ClCompile Include="Hero.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pause_state.cpp" />
@@ -143,9 +145,11 @@
     <ClCompile Include="StateMachine.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation.h" />
     <ClInclude Include="AssetManager.h" />
     <ClInclude Include="Game_Engine.h" />
     <ClInclude Include="game_state.h" />
+    <ClInclude Include="Hero.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="pause_state.h" />
     <ClInclude Include="settings_state.h" />

@@ -17,6 +17,7 @@ public:
 	void renderBG(sf::RenderTarget& target);
 	void renderBackB(sf::RenderTarget& target);
 	void renderSkinsChange(sf::RenderTarget& target);
+	void renderVolumeSettin(sf::RenderTarget& target);
 	void render(float dt);
 
 private:
@@ -29,15 +30,17 @@ private:
 	void Back();
 	void SkinChange();
 	void SpriteSkinChange();
+	void SoundChange();
+	void SoundButtonPressed();
 
 	sf::Text skin_option;
 	sf::Sprite Current_Hero;
 	sf::Sprite SO_mesh;
 
 	sf::Text sound_volume;
-
-	sf::RectangleShape volumeUP;
-	sf::RectangleShape volumeDOWN;
+	sf::Sprite Sound_Current;
+	sf::Sprite volumeUP;
+	sf::Sprite volumeDOWN;
 
 	sf::Sprite BG;
 

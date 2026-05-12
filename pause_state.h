@@ -18,6 +18,7 @@ public:
 
 	void renderButtonSett(sf::RenderTarget& target);
 	void renderBG(sf::RenderTarget& target);
+	void renderBackB(sf::RenderTarget& target);
 	void render(float dt);
 
 private:
@@ -26,6 +27,8 @@ private:
 	void initButtonSett();
 	void initButtSett_mesh();
 	void ButtonSettPress();
+	void initBackB();
+	void Back();
 
 	sf::Sprite BG;
 
@@ -33,7 +36,11 @@ private:
 	sf::Vector2f mousePos;
 
 	sf::RectangleShape ButtSett_mesh;
+	sf::Sprite ButtSett_meshWh;
 	sf::Text Button_sett;
+	float t = 0;
+
+	sf::Sprite BackButt;
 
 	sf::View view;
 

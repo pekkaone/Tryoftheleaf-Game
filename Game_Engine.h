@@ -19,7 +19,7 @@ struct GameData
 	InputManager input;
 	sf::RenderWindow* window;
 	sf::VideoMode videomode;
-	float volume = 100;
+	int volume = 100;
 	int CurrentSkin = 1;
 };
 
